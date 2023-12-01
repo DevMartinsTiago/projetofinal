@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
     <link rel="stylesheet" href="public/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -55,18 +56,16 @@
                     email: email,
                     senha: senha
                 };
-    
-                // Faça uma solicitação AJAX ao servidor
-                fetch('http://localhost:3333/user/cadastro', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
+
+                const api = axios.post("http://localhost:3333/user/cadastro", formData)
+                .then((res)=>{
+                    console.log (res)
                 })
-                .then(response => response.text())
-                .then(message => alert(message))
-                .catch(error => console.error('Erro:', error));
+                .catch((err)=>{
+                    console.log (err)
+                })
+
+       
             });
         });
         
