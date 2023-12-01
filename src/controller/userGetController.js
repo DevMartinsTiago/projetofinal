@@ -14,8 +14,8 @@ const prisma = new PrismaClient()
 
 
 
-const userGetController = (req, res)=>{
-    const user= prisma.user.findMany()
+const userGetController = async (req, res)=>{
+    const user= await prisma.user.findMany()
 
     try{
 

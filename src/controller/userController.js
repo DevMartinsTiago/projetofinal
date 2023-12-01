@@ -14,13 +14,13 @@ const prisma = new PrismaClient()
 
 
 
-const userController = (req, res)=>{
-    const {name, email,senha } = req.body
+const userController = async (req, res)=>{
+    const {nome, email,senha } = req.body
 
     try{
-        const create = prisma.user.create({
+        const create = await prisma.User.create({
             data:{
-                nome:name,
+                nome:nome,
                 email:email,
                 senha:senha,
             }
@@ -30,9 +30,9 @@ const userController = (req, res)=>{
         return res.status(200).json({
             menssage: "funcionou"
         })
-    }catch{
+    }catch(Erro){
         return res.status(500).json({
-            message:"Não funcionou"
+            message:Erro
         })
     }
 
