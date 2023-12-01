@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppings', sans-serif;
+}
+.conteiner{
+    max-width: 1280px  ;
+    margin: auto;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header{
+    width: 100%;
+    padding: 5vh 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 1.5s;
+
+}
+header.rolagem{
+    background-color: black;
+    padding: 2,6vh 4%;
+    
+}
+header.rolagem a{
+    color: silver;
+}    
+header i {
+    font-size: 4vw;
+    color: black;
+}
+header ul{
+    list-style-type: none;
+}
+header ul li{
+    display: inline-block;
+    margin: 0 50px;
+}
+header ul li a{
+    color: white;
+    text-decoration: none;
+}
+.btn-contato button{
+    width: 120px;
+    height: 40px;
+    border: 0;
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+    transition: .2s;   
+}
+
+
+.banner{
+    height: 100vh;
+    background-image: url(https://cdn.discordapp.com/attachments/1158101670438387856/1158108509469163540/barbea.png?ex=651b0c19&is=6519ba99&hm=b170bd87fa0cb680f1cbd4a9179e45cabc63633d2f6faaa450a7bedb9ef245a6&) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner h1 {
+    font-size: 4rem;
+    color: saddlebrown;
+}
+.banner h1 span{
+    color: white;
+}
+#visao{
+    block-size: border-box;
+    margin: 5vh;
+    size: auto;
+    padding: 65px;
+
+}
+#conteiner_visao{
+    height: auto;   
+    display: block;
+    justify-content: start;
+    align-items: center;
+    box-sizing: border-box;
+}
+.flex_visao{
+    margin-top: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 30vh;
+
+}
+@media only screen and (min-width: 420px){ 
+    main{
+        width: 30vw;
+    } 
+    .flex_visao{
+        width: 30vw;
+    } 
+}
+@media only screen and (max-width: 1000px){
+    main{
+        width: 100vw;
+    } 
+    .flex_visao{
+        width: auto;
+    }
+} 
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: black;
+}
+header img {
+    width: 3vw;  
+}
+#servicos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: black;
+    
+    
+}
+
+.servico {
+    width: calc(33.33% - 15px);
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (max-width: 768px) {
+    .servico {
+        width: 100%;
+    }
+}
+.servico img {
+width: 30px;
+height: auto;
+}
+
+@media (max-width: 420px) {
+main {
+  width: 100%;
+}
+
+.flex_visao {
+  width: 100%;
+}
+}
+
+@media (min-width: 421px) and (max-width: 1000px) {
+main {
+  width: 70vw;
+}
+
+.flex_visao {
+  width: 70vw;
+}
+}
+
+@media (min-width: 1001px) {
+main {
+  width: 30vw;
+}
+
+.flex_visao {
+  width: 30vw;
+}
+}
+
+.conteiner_forms{
+max-width: 1280vh;
+
+
+}
+form {
+background-color: white;
+width: 100vh;
+height: 70vh;
+padding: 40px;
+border-radius: 20px;
+opacity: 90%;
+}
+form h2 {
+text-align: center;
+font-size: 35px;
+color: brown;
+
+}
+form p {
+font-size: 20px;
+color: silver;
+text-align: center;
+margin: 20px 0;
+}
+
+.inupt-single {
+position: relative;
+margin: 20px 0;
+
+}
+.inupt-single label{
+position: absolute;
+left: 0;
+bottom: 5px;
+transition: all 0.2s;
+
+
+}
+.myforms{
+width: 100%;
+border: 0;
+border-bottom: 2px solid #ccc;
+padding: 5px;
+font-size: 17px;
+outline: 0;
+
+
+}
+
+form .inupt-single .myform:focus ~ label,
+form .inupt-single .myforms:valid ~ label {
+transform: translateY(-20px);
+font-size: 12px;
+}
+.btn-forms{
+width: 100%;
+text-align: center;
+
+
+}
+form input [type=submit] {
+padding: 10px 40px;
+
+}
+.btn-forms input {
+background-color: brown;
+border-radius: 10px;
+width: 15vh;
+color: silver;
+border-color: goldenrod;
+}
+.btn-cadastro input{
+background-color: brown;
+border-radius: 10px;
+width: 15vh;
+color: silver;
+border-color: goldenrod;
+}
+
+h4{
+padding-bottom: 35px;
+text-align: auto;
+}
+
+@media only screen and (max-width: 768px) {
+form {
+    margin-top: 12vh;
+    height: 80vh;
+    width: 100vh;   
+    display: fixed;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+}
+
+.rodape{
+height: auto;
+width: 100;
+background-color: silver;
+font-size: 2.3vh;
+text-align: center;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.margservico{
+height: 3vh;
+background-color: black;
+
+}
